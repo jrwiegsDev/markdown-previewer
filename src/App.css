@@ -1,0 +1,175 @@
+/* src/App.css */
+
+/* Import a nice monospace font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #282c34;
+  color: #f0f0f0;
+  font-family: 'Fira Code', monospace;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #20232a;
+  border-bottom: 2px solid #61dafb;
+  flex-shrink: 0;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0.5rem 0;
+}
+
+.app-header p {
+  margin: 0.5rem 0;
+  color: #aaa;
+}
+
+.syntax-guide {
+  border: 1px solid #4a505c;
+  border-radius: 8px;
+  padding: 0 1rem;
+  background-color: #282c34;
+}
+
+.syntax-guide table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.syntax-guide th, .syntax-guide td {
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+.syntax-guide th {
+  border-bottom: 1px solid #61dafb;
+}
+
+.syntax-guide code {
+  background-color: #3e4451;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.app-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.editor-pane {
+  width: 50%;
+  padding: 1rem;
+  background-color: #282c34;
+  color: #f0f0f0;
+  border: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  resize: none;
+}
+
+.editor-pane:focus {
+  outline: none;
+}
+
+.preview-pane-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #4a505c;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #20232a;
+  border-bottom: 2px solid #4a505c;
+  flex-shrink: 0;
+}
+
+.preview-header span {
+  font-weight: bold;
+}
+
+.preview-header button {
+  background-color: #3e4451;
+  border: 1px solid #61dafb;
+  color: #61dafb;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.preview-header button:hover {
+  background-color: #4a505c;
+}
+
+.copy-success {
+  margin-left: 1rem;
+  color: #61dafb;
+}
+
+.preview-pane {
+  padding: 0 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Basic styling for rendered markdown */
+.preview-pane h1, .preview-pane h2 {
+  border-bottom: 2px solid #4a505c;
+  padding-bottom: 0.5rem;
+}
+
+.preview-pane code {
+  background-color: #3e4451;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.preview-pane pre {
+  background-color: #20232a;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.preview-pane blockquote {
+  border-left: 4px solid #61dafb;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #aaa;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #282c34;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a505c;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #61dafb;
+}
